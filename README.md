@@ -7,4 +7,4 @@ Get airline information using python
 
 url:https://www.python.org/
 
-数据库: mongodb. 数据库根据结构自动创建
+数据库: mongodb. 数据库的创建根据,抓取的数据结构创建
