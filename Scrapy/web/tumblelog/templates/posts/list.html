@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% import "_forms.html" as forms %}
+
+
+{% block content %}
+<form action="/" method="post">
+    {{ forms.render(form) }}
+    <div class="actions">
+        <input type="submit" class="btn btn-primary" value="submit">
+    </div>
+</form>
+
+    {% for post in posts %}
+    {% for column in post %}
+<li>name:{{column}}</li><li> value:{{post[column]}}</li>
+    {% endfor %}
+
+<!--<h2><a href="{{ url_for('posts.detail', slug=post.slug) }}">{{ post.origin }}</a></h2>
+{% if post.body %}
+  {% if post.post_type == 'Quote' %}
+    <blockquote>{{ post.airWayBillDate }}</blockquote>
+    <p>{{ post.splitExist }}</p>
+  {% else %}
+    <p>{{ post.consigneeName|truncate(100) }}</p>
+  {% endif %}
+{% endif %}
+{% if post.embed_code %}
+  {{ post.airWayBillID|safe() }}
+{% endif %}
+{% if post.image_url %}
+  <p><img src="{{ post.image_url }}" /><p>
+{% endif %}
+<p>
+  {{ post.airWayBillDate }} |
+  {% with total=post.comments|length %}
+      {{ total }} comment {%- if total > 1 %}s{%- endif -%}
+  {% endwith %}
+</p>-->
+    {% endfor %}
+{% endblock %}

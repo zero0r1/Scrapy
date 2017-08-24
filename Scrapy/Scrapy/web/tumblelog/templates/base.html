@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Crawl</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .content {
+            padding-top: 80px;
+        }
+
+        a.brand {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    {%- block topbar -%}
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <h2>
+                    <a href="/" class="brand">Capture</a> <small>world</small>
+                </h2>
+              
+            </div>
+            <div class="navbar-collapse">
+                <ul class="nav nav-pills navbar-nav navbar-right ">
+                    <li>{% if session.get('token_user') == ''.strip()%}
+                        <a href="/login">login</a></li>
+                        {%else%}
+                        <a href="/login/?type=out">login out</a></li>
+                        {%endif%}
+                    <li><a href="/register">register</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    {%- endblock -%}
+    <div class="container">
+        <div class="content">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class=flashes>
+                {% for message in messages %}
+                <h2>{{ message
+}}</h2>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+            {% block page_header %}{% endblock %}
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    {% block js_footer %}{% endblock %}
+</body>
+</html>
