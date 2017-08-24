@@ -2,9 +2,8 @@
 Get airline information using python
 
 # Environment
-visual studio 2015 or higher
-
+Visual Studio 2015 or higher
 
 [Python 2.7.13](https://www.python.org/)
 
-DataBase: Mongodb => Code First => Create DataBase by Model
+[Mongodb](https://www.mongodb.com/) => Code First => Create DataBase by Model
