@@ -1,5 +1,5 @@
 # Scrapy
-Get airline information using python
+Get airline information use python
 
 # Environment
 Visual Studio 2015 or higher
