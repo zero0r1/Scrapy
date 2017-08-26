@@ -1,10 +1,9 @@
 # Scrapy
-Get airline information using python
+Get airline information use python
 
-1,开发环境 visual studio 2015 或之上. 
+# Environment
+Visual Studio 2015 or higher
 
-2,Python 2.7.13
+[Python 2.7.13](https://www.python.org/)
 
-url:https://www.python.org/
-
-数据库: mongodb. 数据库的创建根据,抓取的数据结构创建
+[Mongodb](https://www.mongodb.com/)
